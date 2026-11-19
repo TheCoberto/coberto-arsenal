@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.arrow_particle": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "on_entry": [ "@s new:particle" ],
+          "transitions": [ { "trail": "1.0" } ]
+        },
+        "trail": {
+          "on_entry": [ "@s new:particle" ],
+          "transitions": [ { "default": "1.0" } ]
+        }
+      }
+    }
+  }
+}

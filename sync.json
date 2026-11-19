@@ -1,0 +1,79 @@
+{
+  "source": "../stronger-skeletons",
+  "packs": [
+    {
+      "from": "TheCoberto's Skeleton Variants/BP Skeleton Variants",
+      "to": "Coberto's Arsenal/Arsenal BP",
+      "files": [
+        "items/explosive_bow.json",
+        "items/levitation_bow.json",
+        "items/arrows/explosive_arrow.json",
+        "items/arrows/levitation_arrow.json",
+        "items/throwable/creeper_bomb.json",
+        "entities/explosive_arrow.json",
+        "entities/levitation_arrow.json",
+        "entities/arrow_hit/explosive.json",
+        "entities/throwable/creeper_bomb.json",
+        "animation_controllers/arrow_particle.json",
+        "functions/effect/explosion.mcfunction",
+        "recipes/explosive_bow.json",
+        "recipes/levitation_bow.json",
+        "recipes/arrow/explosive_arrow.json",
+        "recipes/arrow/levitation_arrow.json",
+        "recipes/items/throwable/creeper_bomb.json"
+      ]
+    },
+    {
+      "from": "TheCoberto's Skeleton Variants/RP Skeleton Variants",
+      "to": "Coberto's Arsenal/Arsenal RP",
+      "files": [
+        "entity/explosive_arrow.json",
+        "entity/levitation_arrow.json",
+        "entity/throwable/creeper_bomb.json",
+        "animations/arrow_target_rotation.json",
+        "animations/projectile/grenade.json",
+        "models/entity/arrow_img.json",
+        "models/entity/throwable/creeper_bomb.json",
+        "render_controllers/throwable/creeper_bomb.json",
+        "textures/items/explosive_bow*.png",
+        "textures/items/levitation_bow*.png",
+        "textures/items/arrow/explosive_arrow.png",
+        "textures/items/arrow/levitation_arrow.png",
+        "textures/items/throwable/creeper_bomb.png",
+        "textures/models/throwable/creeper_bomb.png",
+        "sounds/effect/explosion/explode_*.ogg",
+        "sounds/effect/explosion/debris_*.ogg",
+        "sounds/effect/explosion/distant_*.ogg",
+        "sounds/effect/gun/echo_*.ogg",
+        "sounds/effect/player/blind.ogg",
+        "sounds/throwable/grenade/*.ogg"
+      ],
+      "json": [
+        {
+          "file": "textures/item_texture.json",
+          "path": "texture_data",
+          "keys": [ "explosive_bow", "explosive_arrow", "levitation_bow", "levitation_arrow", "creeper_bomb" ]
+        },
+        {
+          "file": "sounds/sound_definitions.json",
+          "path": "sound_definitions",
+          "keys": [
+            "thecoberto.effect.explosion.debris",
+            "thecoberto.effect.explosion.distant",
+            "thecoberto.effect.explosion.explode",
+            "thecoberto.effect.gun.echo",
+            "thecoberto.effect.player.blind",
+            "throwable.grenade.drop",
+            "throwable.grenade.throw"
+          ]
+        }
+      ],
+      "lang": [
+        {
+          "file": "texts/en_US.lang",
+          "keys": [ "item.thecoberto:explosive_arrow.name", "item.thecoberto:levitation_arrow.name" ]
+        }
+      ]
+    }
+  ]
+}

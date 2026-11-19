@@ -1,0 +1,64 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "thecoberto:bee_bomb_entity",
+      "runtime_identifier": "minecraft:snowball",
+      "spawn_category": "creature",
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+    "component_groups": {
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "projectile", "grenade" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.25,
+        "height": 0.25
+      },
+      "minecraft:timer": {
+        "time": 10,
+        "looping": false,
+        "time_down_event": {
+          "event": "thecoberto:despawn"
+        }
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "stick_in_ground": {
+            "shake_time": 0.1
+          }
+        },
+        "power": 1.075,
+        "gravity": 0.06,
+        "inertia": 1,
+        "liquid_inertia": 1,
+        "uncertainty_base": 0.4,
+        "anchor": 100,
+        "offset": [ 0, -0.1, 0 ],
+        "should_bounce": false,
+        "multiple_targets": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "thecoberto:despawn": {
+        "add": {
+          "component_groups": [ "despawn" ]
+        }
+      }
+    }
+  }
+}

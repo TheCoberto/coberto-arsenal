@@ -1,0 +1,33 @@
+{
+  "resource_pack_name": "Coberto's Arsenal RP",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "fat_man": {
+      "textures": "textures/items/fat_man.png"
+    },
+    "mini_nuke": {
+      "textures": "textures/items/mini_nuke.png"
+    },
+    "napalm_bomb": {
+      "textures": "textures/items/napalm_bomb.png"
+    },
+    "explosive_bow": {
+      "textures": "textures/items/explosive_bow.png"
+    },
+    "explosive_arrow": {
+      "textures": "textures/items/arrow/explosive_arrow.png"
+    },
+    "levitation_bow": {
+      "textures": "textures/items/levitation_bow.png"
+    },
+    "levitation_arrow": {
+      "textures": "textures/items/arrow/levitation_arrow.png"
+    },
+    "creeper_bomb": {
+      "textures": "textures/items/throwable/creeper_bomb"
+    },
+    "bee_bomb": {
+      "textures": "textures/items/throwable/bee_bomb"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "thecoberto:swarm_bee": {
+        "volume": 0.6,
+        "pitch": [ 0.9, 1.1 ],
+        "events": {
+          "ambient": "mob.bee.aggressive",
+          "hurt": "mob.bee.hurt",
+          "death": "mob.bee.death",
+          "attack": "mob.bee.sting"
+        }
+      }
+    }
+  }
+}
