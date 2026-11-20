@@ -1,17 +1,17 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Coberto's Arsenal §c§l[1.0.2]",
+		"name": "Coberto's Arsenal §c§l[1.0.3]",
 		"description": "Every TheCoberto weapon in one add-on: the Fat Man rocket launcher, special bows and arrows, the Creeper Bomb and the Bee Bomb! \n§bMCBE 1.21.100+",
 		"uuid": "89ac359d-3c2a-4beb-83f1-00b18c743dab",
-		"version": [ 1, 0, 2 ],
+		"version": [ 1, 0, 3 ],
 		"min_engine_version": [ 1, 21, 100 ]
 	},
 	"modules": [
 		{
 			"type": "resources",
 			"uuid": "e104d379-c83b-4198-b4a9-5090ad0431be",
-			"version": [ 1, 0, 2 ]
+			"version": [ 1, 0, 3 ]
 		}
 	]
 }
