@@ -1,0 +1,36 @@
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "thecoberto:scuttle_bomb",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.throwables"
+      }
+    },
+    "components": {
+      "minecraft:cooldown": {
+        "category": "scuttle_bomb",
+        "duration": 0.65
+      },
+      "minecraft:display_name": {
+        "value": "Scuttle Bomb"
+      },
+      "minecraft:icon": "scuttle_bomb",
+      "minecraft:max_stack_size": 16,
+      "minecraft:projectile": {
+        "projectile_entity": "thecoberto:scuttle_bomb_entity"
+      },
+      "minecraft:throwable": {
+        "do_swing_animation": true,
+        "launch_power_scale": 2
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 3600
+      },
+      "minecraft:tags": {
+        "tags": [ "is_grenade" ]
+      }
+    }
+  }
+}

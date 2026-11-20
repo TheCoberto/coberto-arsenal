@@ -1,1 +1,4 @@
 item.thecoberto:creeper_bomb.name=Creeper Bomb
+entity.thecoberto:scuttle_bomb.name=Bomba Rastejante
+
+action.interact.thecoberto.pick_up=Pegar

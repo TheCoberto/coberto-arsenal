@@ -1,0 +1,22 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "thecoberto:scuttle_bomb_entity",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/models/throwable/scuttle_bomb" },
+      "geometry": { "default": "geometry.thecoberto.scuttle_bomb" },
+      "animations": {
+        "spin": "animation.grenade.spin",
+        "folded": "animation.thecoberto.scuttle_bomb.folded"
+      },
+      "scripts": {
+        "animate": [
+          "folded",
+          { "spin": "!q.is_in_water && !q.is_on_ground" }
+        ]
+      },
+      "render_controllers": [ "controller.render.thecoberto.scuttle_bomb" ]
+    }
+  }
+}

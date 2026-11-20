@@ -28,6 +28,9 @@
     },
     "bee_bomb": {
       "textures": "textures/items/throwable/bee_bomb"
+    },
+    "scuttle_bomb": {
+      "textures": "textures/items/throwable/scuttle_bomb"
     }
   }
 }
