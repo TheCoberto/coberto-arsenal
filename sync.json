@@ -29,6 +29,9 @@
       "files": [
         "entity/explosive_arrow.json",
         "entity/levitation_arrow.json",
+        "attachables/explosive_bow.json",
+        "attachables/levitation_bow.json",
+        "render_controllers/custom_bow.json",
         "entity/throwable/creeper_bomb.json",
         "animations/arrow_target_rotation.json",
         "animations/projectile/grenade.json",
