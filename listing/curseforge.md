@@ -1,19 +1,21 @@
-# MCPEDL listing: Coberto's Arsenal
+# CurseForge listing: Coberto's Arsenal
 
-Post: not posted yet (new post, Add-Ons category)
-Images: promo/banner.png (thumbnail), promo/logo.png. Screenshots worth taking: a Mini-Nuke mushroom cloud, a Bee Bomb swarm, a Scuttle Bomb running at a mob.
-Needs before posting: a LootLabs link and a Google Drive file for the .mcaddon.
+Paste these into the CurseForge Authors Console. Once the project is approved, CurseForge syncs it to MCPEDL.
 
-## Title
-Coberto's Arsenal: Rocket Launcher, Bee Bombs and Explosive Bows
+## Project
 
-## Short description
-A rocket launcher with Mini-Nukes, explosive and levitation bows, Bee Bombs that unleash angry swarms, and Scuttle Bombs that chase down your enemies.
-
-## Introduction
-Coberto's Arsenal puts every weapon I've made into one pack. Launch a Mini-Nuke and watch the mushroom cloud rise, blanket an area in fire with a Napalm Bomb, send mobs floating with a Bow of Levitation, or throw a Bee Bomb and let the swarm do the work. No experiments needed.
+- **Name:** Coberto's Arsenal: Rocket Launcher, Bee Bombs and Explosive Bows
+- **Slug:** `cobertos-arsenal` (new project, so any free slug works)
+- **Summary:** A rocket launcher with Mini-Nukes, explosive and levitation bows, Bee Bombs that unleash angry swarms, and Scuttle Bombs that chase down your enemies.
+- **Class:** Minecraft Bedrock, Addons
+- **Project Distribution** (License section): allow third-party distribution, or it won't show on MCPEDL
+- **Logo:** promo/logo.png
+- **Gallery:** promo/banner.png titled `MCPEDL` (used as the MCPEDL thumbnail), plus screenshots: a Mini-Nuke mushroom cloud, a Bee Bomb swarm, a Scuttle Bomb running at a mob.
 
 ## Description
+
+Coberto's Arsenal puts every weapon I've made into one pack. Launch a Mini-Nuke and watch the mushroom cloud rise, blanket an area in fire with a Napalm Bomb, send mobs floating with a Bow of Levitation, or throw a Bee Bomb and let the swarm do the work. No experiments needed.
+
 **Fat Man**
 
 A rocket launcher that fires two kinds of ammo:
@@ -49,38 +51,49 @@ Hold the ammo you want in your offhand to choose what to fire.
 
 Arsenal replaces Rocket Launcher, Skeleton Variants' bows and Bow Variants. Use it instead of those, not alongside them. The items are the same, so you can switch over in an existing world and keep everything you have.
 
-## Latest changes (1.2.1)
-- Fixed the Scuttle Bomb not chasing mobs or players after landing
+### Installation
 
-1.2.0
-- Added crafting recipes for the Fat Man, Mini-Nuke and Napalm Bomb
-
-1.1.1
-- Scuttle Bombs now chase players too, but never the player who threw them
-
-1.1.0
-- Added the Scuttle Bomb
-- Redrew the Mini-Nuke as a finned bomb
-
-1.0.4
-- The Fat Man shows a Mini-Nuke sliding into the muzzle as you load it
-
-1.0.3
-- The Demolition Bow and Bow of Levitation animate while you draw them
-
-1.0.2
-- Napalm Bombs set the ground on fire properly, and the flames keep burning for about 10 seconds
-
-1.0.0
-- Every TheCoberto weapon in one add-on, plus the new Bee Bomb
-
-## Installation
 1. Download the .mcaddon and open it. Minecraft imports both packs.
 2. Create or edit a world and turn on the Coberto's Arsenal behavior pack (the resource pack is added with it). No experiments needed.
 3. Turn off Rocket Launcher, Bow Variants and Skeleton Variants in that world if you have them.
 
-## Supported Minecraft versions
+### Supported Minecraft versions
+
 1.21.100 and newer
 
-## Downloads
-LootLabs Download (support me!): (add link)
+### Changelog
+
+**1.2.1**
+- Fixed the Scuttle Bomb not chasing mobs or players after landing
+
+**1.2.0**
+- Added crafting recipes for the Fat Man, Mini-Nuke and Napalm Bomb
+
+**1.1.1**
+- Scuttle Bombs now chase players too, but never the player who threw them
+
+**1.1.0**
+- Added the Scuttle Bomb
+- Redrew the Mini-Nuke as a finned bomb
+
+**1.0.4**
+- The Fat Man shows a Mini-Nuke sliding into the muzzle as you load it
+
+**1.0.3**
+- The Demolition Bow and Bow of Levitation animate while you draw them
+
+**1.0.2**
+- Napalm Bombs set the ground on fire properly, and the flames keep burning for about 10 seconds
+
+**1.0.0**
+- Every TheCoberto weapon in one add-on, plus the new Bee Bomb
+
+## File
+
+- **File:** `builds\Coberto's-Arsenal-1.2.1.mcaddon`
+- **Display name:** Coberto's Arsenal 1.2.1
+- **Release type:** Release
+- **Game versions:** 1.21.100 and newer
+- **Changelog:**
+
+- Fixed the Scuttle Bomb not chasing mobs or players after landing
