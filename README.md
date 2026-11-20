@@ -4,7 +4,7 @@
 
 Requires Minecraft Bedrock **1.21.100** or newer. No experiments needed.
 
-> Use Arsenal **instead of** Rocket Launcher (fat-man), Skeleton Variants (stronger-skeletons) and Bow Variants, not alongside them. The item IDs match those add-ons, so you can swap one for the other in an existing world and keep your items.
+> Use Arsenal **instead of** Rocket Launcher (fat-man), Skeleton Variants (skeleton-variants) and Bow Variants, not alongside them. The item IDs match those add-ons, so you can swap one for the other in an existing world and keep your items.
 
 ## Weapons
 
@@ -42,7 +42,7 @@ Operators can run `/thecoberto:fatman` in chat to choose whether Fat Man explosi
 ## Where the files come from
 
 - The Fat Man files started as a copy of [fat-man](https://github.com/TheCoberto/fat-man).
-- The bows, arrows and Creeper Bomb are edited in [stronger-skeletons](https://github.com/TheCoberto/stronger-skeletons) and copied here with `sync.ps1` (see `sync.json`):
+- The bows, arrows and Creeper Bomb are edited in [skeleton-variants](https://github.com/TheCoberto/skeleton-variants) and copied here with `sync.ps1` (see `sync.json`):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File ..\bedrock-tools\sync.ps1
