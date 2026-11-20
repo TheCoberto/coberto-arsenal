@@ -17,6 +17,7 @@ Requires Minecraft Bedrock **1.21.100** or newer. No experiments needed.
 | **Levitation Bow** + **Levitation Arrow** | Arrows make whatever they hit float. |
 | **Creeper Bomb** | Throwable grenade that explodes on impact without breaking blocks. |
 | **Bee Bomb** | Throwable bomb that bursts into 6 angry bees. They attack every mob and player nearby except the thrower, don't die when they sting, and fly off after 30 seconds. Only Bee Bomb bees go away; other bees are never touched. |
+| **Scuttle Bomb** | Throwable mine on legs. A direct hit explodes. If it lands on a block it waits there, runs at the nearest hostile mob within 16 blocks and explodes when it reaches it. Use it while it's waiting to pick it back up. |
 
 ### Bee Bomb recipe
 
@@ -24,6 +25,14 @@ Requires Minecraft Bedrock **1.21.100** or newer. No experiments needed.
  . H T      H = Honeycomb
  H G H      T = Tripwire Hook
  G H G      G = Gunpowder
+```
+
+### Scuttle Bomb recipe (makes 2)
+
+```
+ . R .      R = Redstone Torch
+ I T I      I = Iron Ingot, T = TNT
+ N . N      N = Iron Nugget
 ```
 
 ## Settings
@@ -39,7 +48,7 @@ Operators can run `/thecoberto:fatman` in chat to choose whether Fat Man explosi
 powershell -ExecutionPolicy Bypass -File ..\bedrock-tools\sync.ps1
 ```
 
-- The Bee Bomb and swarm bee live only here.
+- The Bee Bomb, swarm bee and Scuttle Bomb live only here.
 
 ## Building
 

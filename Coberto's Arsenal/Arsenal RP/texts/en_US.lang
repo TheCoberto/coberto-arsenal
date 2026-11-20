@@ -3,3 +3,7 @@ item.thecoberto:explosive_arrow.name=Explosive Arrow
 item.thecoberto:levitation_arrow.name=Levitation Arrow
 
 entity.thecoberto:swarm_bee.name=Swarm Bee
+
+entity.thecoberto:scuttle_bomb.name=Scuttle Bomb
+
+action.interact.thecoberto.pick_up=Pick Up

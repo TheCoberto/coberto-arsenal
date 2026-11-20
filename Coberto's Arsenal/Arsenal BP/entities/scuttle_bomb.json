@@ -1,0 +1,137 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "thecoberto:scuttle_bomb",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    // A Scuttle Bomb that landed without hitting anything. It sits still until a
+    // hostile mob comes within 16 blocks, runs at it and arms itself when close.
+    // scripts/scuttle_bomb.js listens for thecoberto:arm and sets off the blast.
+    "component_groups": {
+      "thecoberto:armed": {
+        "minecraft:is_ignited": {}
+      },
+      "thecoberto:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "scuttle_bomb", "explosive" ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.45
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          { "cause": "fall", "deals_damage": false },
+          {
+            // Caught in another blast: go off too.
+            "on_damage": {
+              "filters": {
+                "any_of": [
+                  { "test": "is_damage_cause", "value": "entity_explosion" },
+                  { "test": "is_damage_cause", "value": "block_explosion" }
+                ]
+              },
+              "event": "thecoberto:arm"
+            },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:persistent": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:breathable": {
+        "breathes_water": true,
+        "breathes_air": true
+      },
+      "minecraft:movement": {
+        "value": 0.32
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_damage_blocks": true
+      },
+      "minecraft:attack": {
+        "damage": 0
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 1,
+        "within_radius": 16,
+        "reselect_targets": true,
+        "must_see": false,
+        "entity_types": [
+          {
+            "filters": { "test": "is_family", "subject": "other", "value": "monster" },
+            "max_dist": 16
+          }
+        ]
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 2,
+        "speed_multiplier": 1.4,
+        "track_target": true,
+        "require_complete_path": false
+      },
+      "minecraft:target_nearby_sensor": {
+        "inside_range": 1.75,
+        "outside_range": 3,
+        "must_see": false,
+        "on_inside_range": {
+          "event": "thecoberto:arm",
+          "target": "self"
+        }
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "on_interact": {
+              "filters": {
+                "all_of": [
+                  { "test": "is_family", "subject": "other", "value": "player" },
+                  { "test": "has_component", "subject": "self", "operator": "!=", "value": "minecraft:is_ignited" }
+                ]
+              },
+              "event": "thecoberto:picked_up",
+              "target": "self"
+            },
+            "spawn_items": {
+              "table": "loot_tables/entities/scuttle_bomb_pickup.json"
+            },
+            "swing": true,
+            "interact_text": "action.interact.thecoberto.pick_up"
+          }
+        ]
+      }
+    },
+    "events": {
+      "thecoberto:arm": {
+        "add": {
+          "component_groups": [ "thecoberto:armed" ]
+        }
+      },
+      "thecoberto:picked_up": {
+        "add": {
+          "component_groups": [ "thecoberto:despawn" ]
+        }
+      }
+    }
+  }
+}

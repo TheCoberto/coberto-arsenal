@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "thecoberto:scuttle_bomb",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/models/throwable/scuttle_bomb" },
+      "geometry": { "default": "geometry.thecoberto.scuttle_bomb" },
+      "animations": {
+        "walk": "animation.thecoberto.scuttle_bomb.walk"
+      },
+      "scripts": {
+        "animate": [ "walk" ]
+      },
+      "render_controllers": [ "controller.render.thecoberto.scuttle_bomb" ]
+    }
+  }
+}
