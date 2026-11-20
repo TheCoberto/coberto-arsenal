@@ -22,7 +22,7 @@ A rocket launcher that fires two kinds of ammo:
 
 Operators can run `/thecoberto:fatman` to choose whether explosions break blocks and whether Napalm Bombs start fires, so it's safe to use on servers.
 
-Get it with `/give @s thecoberto:fat_man`, `/give @s thecoberto:mini_nuke` and `/give @s thecoberto:napalm_bomb`.
+Hold the ammo you want in your offhand to choose what to fire.
 
 **Bows**
 - **Demolition Bow** + **Explosive Arrows**: arrows explode on impact.
@@ -33,7 +33,10 @@ Get it with `/give @s thecoberto:fat_man`, `/give @s thecoberto:mini_nuke` and `
 - **Bee Bomb**: bursts into 6 angry bees that attack every mob and player nearby except you. They don't die when they sting and fly off after 30 seconds. Normal bees are never affected.
 - **Scuttle Bomb**: a mine on legs. A direct hit explodes. If it lands on a block it waits, then runs at the nearest hostile mob or player within 16 blocks (never you) and explodes when it gets there. Use it while it's waiting to pick it back up.
 
-**Crafting** (crafting table)
+**Crafting** (crafting table; everything is also in the creative inventory under Equipment)
+- **Fat Man**: 3 iron ingots on the top row and 3 on the bottom, with tripwire hook, dispenser and redstone across the middle.
+- **Mini-Nuke**: a diamond in the center, TNT on the four sides and iron ingots in the corners.
+- **Napalm Bomb** (makes 2): TNT in the center, fire charges on the four sides and iron nuggets in the corners.
 - **Demolition Bow**: bow in the middle, 3 TNT down the left column, 3 string down the right.
 - **Bow of Levitation**: bow in the middle, 3 blaze rods down the left column, 3 blaze powder down the right.
 - **Explosive Arrow**: feather, arrow and TNT in a row.
