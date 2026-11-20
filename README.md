@@ -19,6 +19,20 @@ Requires Minecraft Bedrock **1.21.100** or newer. No experiments needed.
 | **Bee Bomb** | Throwable bomb that bursts into 6 angry bees. They attack every mob and player nearby except the thrower, don't die when they sting, and fly off after 30 seconds. Only Bee Bomb bees go away; other bees are never touched. |
 | **Scuttle Bomb** | Throwable mine on legs. A direct hit explodes. If it lands on a block it waits there, runs at the nearest hostile mob or player within 16 blocks (never whoever threw it) and explodes when it reaches it. Use it while it's waiting to pick it back up. |
 
+### Fat Man and ammo recipes
+
+```
+Fat Man                Mini-Nuke              Napalm Bomb (makes 2)
+ I I I                  I T I                  N F N
+ H D R                  T X T                  F T F
+ I I I                  I T I                  N F N
+
+I = Iron Ingot, H = Tripwire Hook, D = Dispenser, R = Redstone, T = TNT,
+X = Diamond, N = Iron Nugget, F = Fire Charge
+```
+
+These recipes are the same in [fat-man](https://github.com/TheCoberto/fat-man); keep them in step.
+
 ### Bee Bomb recipe
 
 ```
