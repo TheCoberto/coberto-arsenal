@@ -90,23 +90,6 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(
   { entityTypes: [WALKER], eventTypes: ["thecoberto:arm"] }
 );
 
-// The players owner slot, giving them one (and its tag) the first time they throw.
-function ownerSlot(player) {
-  try {
-    let slot = player.getDynamicProperty(SLOT_PROPERTY);
-    if (typeof slot !== "number" || slot < 0 || slot >= SLOTS) {
-      const next = world.getDynamicProperty(NEXT_SLOT_PROPERTY);
-      slot = typeof next === "number" ? next % SLOTS : 0;
-      world.setDynamicProperty(NEXT_SLOT_PROPERTY, slot + 1);
-      player.setDynamicProperty(SLOT_PROPERTY, slot);
-    }
-    if (!player.hasTag(OWNER_TAG + slot)) player.addTag(OWNER_TAG + slot);
-    return slot;
-  } catch {
-    return undefined;
-  }
-}
-
 // The player's owner slot, giving them one (and its tag) the first time they throw.
 function ownerSlot(player) {
   try {
