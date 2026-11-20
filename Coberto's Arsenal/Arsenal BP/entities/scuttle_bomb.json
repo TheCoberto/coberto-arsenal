@@ -7,9 +7,211 @@
       "is_summonable": true
     },
     // A Scuttle Bomb that landed without hitting anything. It sits still until a
-    // hostile mob comes within 16 blocks, runs at it and arms itself when close.
-    // scripts/scuttle_bomb.js listens for thecoberto:arm and sets off the blast.
+    // hostile mob or a player other than its thrower comes within 16 blocks, runs
+    // at it and arms itself when close.
+    // scripts/scuttle_bomb.js gives each thrower a permanent owner slot (player tag
+    // thecoberto:scuttle_owner_<slot>) and triggers thecoberto:owner_<slot> on the
+    // bomb, whose target filter skips that tag. thecoberto:owner_none (no player
+    // threw it) targets every player. SLOTS in the script must match these groups.
+    // The script also listens for thecoberto:arm and sets off the blast.
     "component_groups": {
+      "thecoberto:owner_none": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_0": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_0" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_1": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_1" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_2": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_2" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_3": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_3" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_4": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_4" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_5": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_5" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_6": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_6" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "thecoberto:owner_7": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "within_radius": 16,
+          "reselect_targets": true,
+          "must_see": false,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  { "test": "is_family", "subject": "other", "value": "monster" },
+                  { "all_of": [
+                    { "test": "is_family", "subject": "other", "value": "player" },
+                    { "test": "has_tag", "subject": "other", "operator": "!=", "value": "thecoberto:scuttle_owner_7" }
+                  ] }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
       "thecoberto:armed": {
         "minecraft:is_ignited": {}
       },
@@ -69,18 +271,6 @@
       "minecraft:attack": {
         "damage": 0
       },
-      "minecraft:behavior.nearest_attackable_target": {
-        "priority": 1,
-        "within_radius": 16,
-        "reselect_targets": true,
-        "must_see": false,
-        "entity_types": [
-          {
-            "filters": { "test": "is_family", "subject": "other", "value": "monster" },
-            "max_dist": 16
-          }
-        ]
-      },
       "minecraft:behavior.melee_attack": {
         "priority": 2,
         "speed_multiplier": 1.4,
@@ -122,6 +312,15 @@
       }
     },
     "events": {
+      "thecoberto:owner_none": { "add": { "component_groups": [ "thecoberto:owner_none" ] } },
+      "thecoberto:owner_0": { "add": { "component_groups": [ "thecoberto:owner_0" ] } },
+      "thecoberto:owner_1": { "add": { "component_groups": [ "thecoberto:owner_1" ] } },
+      "thecoberto:owner_2": { "add": { "component_groups": [ "thecoberto:owner_2" ] } },
+      "thecoberto:owner_3": { "add": { "component_groups": [ "thecoberto:owner_3" ] } },
+      "thecoberto:owner_4": { "add": { "component_groups": [ "thecoberto:owner_4" ] } },
+      "thecoberto:owner_5": { "add": { "component_groups": [ "thecoberto:owner_5" ] } },
+      "thecoberto:owner_6": { "add": { "component_groups": [ "thecoberto:owner_6" ] } },
+      "thecoberto:owner_7": { "add": { "component_groups": [ "thecoberto:owner_7" ] } },
       "thecoberto:arm": {
         "add": {
           "component_groups": [ "thecoberto:armed" ]
