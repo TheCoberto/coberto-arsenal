@@ -1,16 +1,16 @@
 {
 	"format_version": 2,
 	"header": {
-		"name": "Coberto's Arsenal §c§l[1.0.3]",
+		"name": "Coberto's Arsenal §c§l[1.0.4]",
 		"description": "Every TheCoberto weapon in one add-on: the Fat Man rocket launcher, special bows and arrows, the Creeper Bomb and the Bee Bomb! \n§bMCBE 1.21.100+",
 		"uuid": "399b7db9-d53f-4ba1-92cb-d846afc322ae",
-		"version": [ 1, 0, 3 ],
+		"version": [ 1, 0, 4 ],
 		"min_engine_version": [ 1, 21, 100 ]
 	},
 	"modules": [
 		{
 			"description": "Behavior",
-			"version": [ 1, 0, 3 ],
+			"version": [ 1, 0, 4 ],
 			"uuid": "ac8710a4-955a-48d3-b232-92b4a26599c9",
 			"type": "data"
 		},
@@ -20,13 +20,13 @@
 			"language": "javascript",
 			"entry": "scripts/main.js",
 			"uuid": "4fb6e89c-364b-402c-b673-292e54fd4cb7",
-			"version": [ 1, 0, 3 ]
+			"version": [ 1, 0, 4 ]
 		}
 	],
 	"dependencies": [
 		{
 			"uuid": "89ac359d-3c2a-4beb-83f1-00b18c743dab",
-			"version": [ 1, 0, 3 ]
+			"version": [ 1, 0, 4 ]
 		},
 		{
 			"module_name": "@minecraft/server",
