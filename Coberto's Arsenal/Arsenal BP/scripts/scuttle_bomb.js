@@ -3,15 +3,25 @@ import { Direction, system, world } from "@minecraft/server";
 // Scuttle Bomb: a thrown mine on legs.
 // - A direct hit on a mob or player explodes straight away.
 // - Landing on a block turns it into a walking Scuttle Bomb (entities/scuttle_bomb.json).
-//   That entity runs at the nearest hostile mob within 16 blocks and arms itself when
-//   it gets close (event thecoberto:arm); this file then sets off the blast after a
-//   short fuse. Until it finds a target it sits still and can be picked back up.
+//   That entity runs at the nearest hostile mob or player (never its thrower) within
+//   16 blocks and arms itself when it gets close (event thecoberto:arm); this file then
+//   sets off the blast after a short fuse. Until it finds a target it sits still and
+//   can be picked back up.
 
 const THROWN = "thecoberto:scuttle_bomb_entity";
 const WALKER = "thecoberto:scuttle_bomb";
 
 const BLAST_POWER = 3;
 const FUSE_TICKS = 15;
+
+// Each thrower gets a permanent owner slot: a tag the walker's target filter skips.
+// SLOTS must match the thecoberto:owner_<n> groups in entities/scuttle_bomb.json.
+// With more than SLOTS throwers in a world, two of them share a slot and so are
+// safe from each other's bombs.
+const SLOTS = 8;
+const OWNER_TAG = "thecoberto:scuttle_owner_";
+const SLOT_PROPERTY = "thecoberto:scuttle_slot";
+const NEXT_SLOT_PROPERTY = "thecoberto:scuttle_next_slot";
 
 // How far out from the face it hit the walker is placed, so it doesn't spawn inside the block.
 const FACE_OFFSET = {
@@ -31,7 +41,7 @@ world.afterEvents.projectileHitEntity.subscribe((event) => {
 
 world.afterEvents.projectileHitBlock.subscribe((event) => {
   if (!isThrownBomb(event.projectile)) return;
-  const { dimension, location } = event;
+  const { dimension, location, source } = event;
   remove(event.projectile);
 
   let at = location;
@@ -46,7 +56,9 @@ world.afterEvents.projectileHitBlock.subscribe((event) => {
   } catch {}
 
   try {
-    dimension.spawnEntity(WALKER, at);
+    const walker = dimension.spawnEntity(WALKER, at);
+    const slot = source?.typeId === "minecraft:player" ? ownerSlot(source) : undefined;
+    walker.triggerEvent(slot === undefined ? "thecoberto:owner_none" : `thecoberto:owner_${slot}`);
   } catch {} // Unloaded chunk.
 });
 
@@ -77,6 +89,40 @@ world.afterEvents.dataDrivenEntityTrigger.subscribe(
   },
   { entityTypes: [WALKER], eventTypes: ["thecoberto:arm"] }
 );
+
+// The players owner slot, giving them one (and its tag) the first time they throw.
+function ownerSlot(player) {
+  try {
+    let slot = player.getDynamicProperty(SLOT_PROPERTY);
+    if (typeof slot !== "number" || slot < 0 || slot >= SLOTS) {
+      const next = world.getDynamicProperty(NEXT_SLOT_PROPERTY);
+      slot = typeof next === "number" ? next % SLOTS : 0;
+      world.setDynamicProperty(NEXT_SLOT_PROPERTY, slot + 1);
+      player.setDynamicProperty(SLOT_PROPERTY, slot);
+    }
+    if (!player.hasTag(OWNER_TAG + slot)) player.addTag(OWNER_TAG + slot);
+    return slot;
+  } catch {
+    return undefined;
+  }
+}
+
+// The player's owner slot, giving them one (and its tag) the first time they throw.
+function ownerSlot(player) {
+  try {
+    let slot = player.getDynamicProperty(SLOT_PROPERTY);
+    if (typeof slot !== "number" || slot < 0 || slot >= SLOTS) {
+      const next = world.getDynamicProperty(NEXT_SLOT_PROPERTY);
+      slot = typeof next === "number" ? next % SLOTS : 0;
+      world.setDynamicProperty(NEXT_SLOT_PROPERTY, slot + 1);
+      player.setDynamicProperty(SLOT_PROPERTY, slot);
+    }
+    if (!player.hasTag(OWNER_TAG + slot)) player.addTag(OWNER_TAG + slot);
+    return slot;
+  } catch {
+    return undefined;
+  }
+}
 
 function isThrownBomb(projectile) {
   try {

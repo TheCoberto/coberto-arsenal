@@ -17,7 +17,7 @@ Requires Minecraft Bedrock **1.21.100** or newer. No experiments needed.
 | **Levitation Bow** + **Levitation Arrow** | Arrows make whatever they hit float. |
 | **Creeper Bomb** | Throwable grenade that explodes on impact without breaking blocks. |
 | **Bee Bomb** | Throwable bomb that bursts into 6 angry bees. They attack every mob and player nearby except the thrower, don't die when they sting, and fly off after 30 seconds. Only Bee Bomb bees go away; other bees are never touched. |
-| **Scuttle Bomb** | Throwable mine on legs. A direct hit explodes. If it lands on a block it waits there, runs at the nearest hostile mob within 16 blocks and explodes when it reaches it. Use it while it's waiting to pick it back up. |
+| **Scuttle Bomb** | Throwable mine on legs. A direct hit explodes. If it lands on a block it waits there, runs at the nearest hostile mob or player within 16 blocks (never whoever threw it) and explodes when it reaches it. Use it while it's waiting to pick it back up. |
 
 ### Bee Bomb recipe
 
