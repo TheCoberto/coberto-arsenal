@@ -49,7 +49,10 @@ Hold the ammo you want in your offhand to choose what to fire.
 
 Arsenal replaces Rocket Launcher, Skeleton Variants' bows and Bow Variants. Use it instead of those, not alongside them. The items are the same, so you can switch over in an existing world and keep everything you have.
 
-## Latest changes (1.2.0)
+## Latest changes (1.2.1)
+- Fixed the Scuttle Bomb not chasing mobs or players after landing
+
+1.2.0
 - Added crafting recipes for the Fat Man, Mini-Nuke and Napalm Bomb
 
 1.1.1
