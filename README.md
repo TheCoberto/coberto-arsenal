@@ -31,7 +31,7 @@ I = Iron Ingot, H = Tripwire Hook, D = Dispenser, R = Redstone, T = TNT,
 X = Diamond, N = Iron Nugget, F = Fire Charge
 ```
 
-These recipes are the same in [fat-man](https://github.com/TheCoberto/fat-man); keep them in step.
+These recipes, and the rest of the Fat Man, are edited in [fat-man](https://github.com/TheCoberto/fat-man) and copied here with `sync.ps1`.
 
 ### Bee Bomb recipe
 

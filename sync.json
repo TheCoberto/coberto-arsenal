@@ -77,6 +77,51 @@
           "keys": [ "item.thecoberto:explosive_arrow.name", "item.thecoberto:levitation_arrow.name" ]
         }
       ]
+    },
+    {
+      "source": "../fat-man",
+      "from": "TheCoberto's Fat Man/BP Fat Man",
+      "to": "Coberto's Arsenal/Arsenal BP",
+      "files": [
+        { "from": "scripts/main.js", "to": "scripts/fat_man.js" },
+        "entities/mini_nuke.json",
+        "entities/mini_nuke_explosive.json",
+        "entities/napalm_bomb.json",
+        "items/fat_man.json",
+        "items/mini_nuke.json",
+        "items/napalm_bomb.json",
+        "recipes/fat_man.json",
+        "recipes/mini_nuke.json",
+        "recipes/napalm_bomb.json"
+      ]
+    },
+    {
+      "source": "../fat-man",
+      "from": "TheCoberto's Fat Man/RP Fat Man",
+      "to": "Coberto's Arsenal/Arsenal RP",
+      "files": [
+        "animation_controllers/fat_man.json",
+        "animations/bow_cutom.json",
+        "animations/fat_man.json",
+        "attachables/fat_man.json",
+        "entity/mini_nuke.json",
+        "entity/napalm_bomb.json",
+        "materials/entity.material",
+        "particles/explosion/explosion_*.json",
+        "particles/vanilla/dragon_death_explosion.json",
+        "sounds/effect/explosion/explode?.ogg",
+        "sounds/effect/explosion/indoors_*.ogg",
+        "textures/items/fat_man*.png",
+        "textures/items/mini_nuke.png",
+        "textures/items/napalm_bomb.png",
+        "textures/particle/explosion_debris.png",
+        "textures/particle/explosion_flash.png",
+        "textures/particle/particles.png",
+        "textures/particle/spark.png"
+      ],
+      "json": [
+        { "file": "textures/item_texture.json", "path": "texture_data", "keys": [ "fat_man", "mini_nuke", "napalm_bomb" ] }
+      ]
     }
   ]
 }
